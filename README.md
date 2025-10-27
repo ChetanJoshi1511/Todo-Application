@@ -58,8 +58,8 @@ const addTodo = (todo) => {
 
 ### Update - Edit Todo
 
-const updateTodo = (id, todo) => {
 ```  
+const updateTodo = (id, todo) => {
 setTodos((prev) => {
     return prev.map((todoItem) => 
       todoItem.id === id ? todo : todoItem
