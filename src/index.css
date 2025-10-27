@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+body {
+  display: flex;
+  justify-content: space-evenly;
+  background: linear-gradient(to right, #1a1a2e, #16213e, #0f3460);
+}
+
+form{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+form input {
+  width: 50vw;
+  height: 50px;
+  padding: 10px;
+  border: 5px solid rgb(0, 255, 13);
+  border-radius: 40px;
+  color:beige;
+}
+
+form input:focus {
+  border-color: salmon;
+  outline: none;
+}
+
+
+
+@keyframes colorCycle {
+  0% {
+    color: #ff4d4d;
+  }
+
+  25% {
+    color: #ffa64d;
+  }
+
+  50% {
+    color: #4dff88;
+  }
+
+  75% {
+    color: #f3ff4d;
+  }
+
+  100% {
+    color: #ff4dd2;
+  }
+}
+
+.rainbow-text {
+  margin: 10px;
+  animation: colorCycle 1s ease-in-out infinite;
+  font-size: 3rem;
+}
+
+.add-btn{
+  height: 60px;
+  width: 60px;
+  margin-left: 10px;
+}
+
+.btn:active{
+  transform: scale(0.9);
+}
+
+@keyframes clickEffect {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  25% {
+    transform: scale(0.95) translateX(-2px);
+  }
+  50% {
+    transform: scale(1.2) translateX(2px);
+  }
+  75% {
+    transform: scale(1.2) translateX(-1px);
+  }
+  100% {
+    transform: scale(1) translateX(0);
+  }
+}
+
+.btn-del:active{
+  animation: clickEffect 0.05s step-start;
+}
+
+.custom-checkbox{
+  display: flex;
+  align-items: center;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  /* Remove the default OS style */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  width: 22px;
+  height: 22px;
+  border: 2px solid #ff0000;
+  border-radius: 6px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.custom-checkbox input[type="checkbox"]:hover {
+  box-shadow: 0 0 6px rgba(0, 114, 255, 0.4);
+  transform: scale(1.05);
+}
+
+/* Active (pressed) effect */
+.custom-checkbox input[type="checkbox"]:active {
+  transform: scale(0.9);
+}
+
+/* Checked state */
+.custom-checkbox input[type="checkbox"]:checked {
+  background-color: #fd05bf;
+  border-color: #0400ff;
+}
+
+/* Checkmark */
+.custom-checkbox input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Optional: subtle transition when toggling */
+.custom-checkbox input[type="checkbox"]::after {
+  transition: all 0.2s ease;
+}
