@@ -13,7 +13,7 @@ export default function ListItem({todo}){
                 text-black ${todo.completed ? "bg-[#d31461]" : "bg-[#c6e9a7]"}`}
         >
             {isEditable ? <></>:
-                <label class="custom-checkbox">
+                <label className="custom-checkbox">
                 <input
                     type="checkbox"
                     className="cursor-pointer"
