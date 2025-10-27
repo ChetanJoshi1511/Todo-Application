@@ -44,7 +44,7 @@ function App() {
     if(todos && todos.length>0){
       setTodos(todos);
     }
-  },[]);
+  },[todos]);
 
   // setting todo to local storage
   useEffect(()=>{
